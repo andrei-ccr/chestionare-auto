@@ -1,0 +1,50 @@
+body {
+	color: rgb(76, 76, 76);
+	font-family: Tahoma,Verdana,Arial,Sans-serif;
+}
+
+.red_but { background: url("../images/but_del.jpg") no-repeat ; }
+.yellow_but { background: url("../images/but_later.jpg") no-repeat; }
+.green_but { background: url("../images/but_trimite.jpg") no-repeat; }
+.start_but { background: url("../images/start.jpg") no-repeat; background-size:100% 100%;}
+
+.red_but, .yellow_but, .green_but {
+	display:inline-block;
+	cursor: pointer;
+	cursor: hand; 
+	text-align: center; 
+	margin-left: 70px; 
+	width: 211px; 
+	height: 62px; 
+	color: #000000;
+}
+
+.start_but {
+
+	cursor: pointer; 
+	cursor: hand; 
+	margin-left: 85px; 
+	margin-right: 85px;
+	/*width: 113px;
+	height: 67px;*/
+	width:151px;
+	height:89px;
+	
+}
+
+#wrap {
+	padding-left: 14%;
+}
+#container {
+	position:relative;
+	top:20px;
+	width: 430px;
+	height: 172px;
+	text-align:center;
+	font-size:13px;
+	line-height:200%;
+	font-weight:bold;
+	padding:20px 10px 0px;
+	background: url("../images/back.jpg") no-repeat scroll 0% 0% transparent;
+	
+}
