@@ -21,8 +21,9 @@ SET time_zone = "+00:00";
 --
 -- Database: `chestionare`
 --
-CREATE DATABASE IF NOT EXISTS `chestionare` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `chestionare`;
+-- Uncomment to automatically create new database
+-- CREATE DATABASE IF NOT EXISTS `chestionare` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+-- USE `chestionare`;
 
 -- --------------------------------------------------------
 
