@@ -31,7 +31,7 @@
 			if ($rasp_ales === $_SESSION['rasp_corecte']) {
 				$_SESSION['rasp_corect']++;
 			} else {
-				if($_COOKIE['mod_corect'] == true) {
+				if($_SESSION['modcorectare'] == true) {
 					if($_SESSION['corectare'] == FALSE) {$_SESSION['corectare'] = true; $_SESSION['rasp_gresit']++; die(); }
 				} 
 				else 
@@ -79,7 +79,7 @@
 				
 			}
 			
-			if($_COOKIE['mod_corect'] == true) {
+			if($_SESSION['modcorectare'] == true) {
 				$_SESSION['corectare'] = false;
 			}
 			
@@ -142,7 +142,4 @@
 	}
 	
 
-
-	
-	mysql_close();
 ?>

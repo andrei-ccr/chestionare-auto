@@ -3,7 +3,7 @@
 	$.get("timp.php", function(data) {
 		secs = data;
 		$('#timp').countdown({
-			until: secs ,compact: true, onExpiry: respinge
+			until: secs , compact: true, format: 'MS', onExpiry: respinge
 		});
 	});
 

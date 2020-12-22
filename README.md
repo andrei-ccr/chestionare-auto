@@ -6,12 +6,14 @@ Platforma pentru examinare auto.
 - Stil DRPCIV
 
 ## Imagini
-Pagina de start examinare
-![pagina_start](/preview/1.png)
 
 Intrebare din timpul examinarii
+![pagina_start](/preview/1.png)
 
+In cazul in care raspunsul este gresit, se va indica optiunea corecta
 ![pagina chestionar](/preview/2.png)
+
+![pagina chestionar](/preview/3.png)
 
 ## Configurare
 

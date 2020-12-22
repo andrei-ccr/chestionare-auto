@@ -1,9 +1,9 @@
 <?php
 	session_start();
-	session_destroy();
-	if($_GET['c'] > 0) { setcookie("mod_corect",true); }
-	else { setcookie("mod_corect",false); }
-	
+	session_unset();
+
+	if($_GET['c'] > 0) $_SESSION['modcorectare'] = true;
+	else $_SESSION['modcorectare'] = false;
 	
 	header("Location: chestionar.php");
 	exit();

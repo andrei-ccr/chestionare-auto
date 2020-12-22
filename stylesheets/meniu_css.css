@@ -1,12 +1,15 @@
 body {
-	color: rgb(76, 76, 76);
-	font-family: Tahoma,Verdana,Arial,Sans-serif;
+	color: #515151;
+	background: #eee;
+	font-size: 24px;
+	text-align: center;
+	font-family: Arial,sans-serif;
 }
 
 .red_but { background: url("../images/but_del.jpg") no-repeat ; }
 .yellow_but { background: url("../images/but_later.jpg") no-repeat; }
 .green_but { background: url("../images/but_trimite.jpg") no-repeat; }
-.start_but { background: url("../images/start.jpg") no-repeat; background-size:100% 100%;}
+
 
 .red_but, .yellow_but, .green_but {
 	display:inline-block;
@@ -19,32 +22,18 @@ body {
 	color: #000000;
 }
 
-.start_but {
-
+.button {
 	cursor: pointer; 
-	cursor: hand; 
-	margin-left: 85px; 
-	margin-right: 85px;
-	/*width: 113px;
-	height: 67px;*/
-	width:151px;
-	height:89px;
-	
+	background: #0c6bd0;
+	display: inline-block;
+	padding: 35px 90px;
+	color: white;
+	letter-spacing: 4px;
+	border-radius: 6px;
 }
 
 #wrap {
-	padding-left: 14%;
-}
-#container {
-	position:relative;
-	top:20px;
-	width: 430px;
-	height: 172px;
-	text-align:center;
-	font-size:13px;
-	line-height:200%;
-	font-weight:bold;
-	padding:20px 10px 0px;
-	background: url("../images/back.jpg") no-repeat scroll 0% 0% transparent;
-	
+	width: 600px;
+	margin: auto;
+	line-height: 35px;
 }

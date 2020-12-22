@@ -2,7 +2,7 @@ $(document).ready(function() {
 	var rasp1 = 'nu';
 	var rasp2 = 'nu';
 	var rasp3 = 'nu';
-	$("#r_a").click( function() {
+	$("#v_a").click( function() {
 		$(this).data('sel',true);
 		$(this).addClass('sel_a');
 		rasp1 = 'da';
@@ -10,7 +10,7 @@ $(document).ready(function() {
 	
 	});
 	
-	$("#r_b").click( function() {
+	$("#v_b").click( function() {
 		$(this).data('sel',true);
 		$(this).addClass('sel_b');
 		rasp2 = 'da';
@@ -18,7 +18,7 @@ $(document).ready(function() {
 		
 	});
 	
-	$("#r_c").click( function() {
+	$("#v_c").click( function() {
 		$(this).data('sel',true);
 		$(this).addClass('sel_c');
 		rasp3 = 'da';
@@ -26,7 +26,7 @@ $(document).ready(function() {
 	});
 	
 	$("#trimit_raspunsul").click( function() {
-		if(($("#r_a").data('sel')) || ($("#r_b").data('sel')) || ($("#r_c").data('sel'))){
+		if(($("#v_a").data('sel')) || ($("#v_b").data('sel')) || ($("#v_c").data('sel'))){
 			
 			$.get("system.php",{ 'rasp[]': [rasp1,rasp2,rasp3]},function(data) {
 				location.reload();
@@ -39,12 +39,12 @@ $(document).ready(function() {
 		rasp1 = 'nu';
 		rasp2 = 'nu';	
 		rasp3 = 'nu';
-		$("#r_a").removeClass("sel_a");
-		$("#r_b").removeClass("sel_b");
-		$("#r_c").removeClass("sel_c");
-		$("#r_a").removeData('sel');
-		$("#r_b").removeData('sel');
-		$("#r_c").removeData('sel');
+		$("#v_a").removeClass("sel_a");
+		$("#v_b").removeClass("sel_b");
+		$("#v_c").removeClass("sel_c");
+		$("#v_a").removeData('sel');
+		$("#v_b").removeData('sel');
+		$("#v_c").removeData('sel');
 		$("#v_a").removeClass('highlight');
 		$("#v_b").removeClass('highlight');
 		$("#v_c").removeClass('highlight');

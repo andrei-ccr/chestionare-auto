@@ -51,88 +51,77 @@
 <html>
 	<head>
 		<title>Testare</title>
-		<script type="text/javascript" src="jquery-1.10.2.min.js" ></script>
+		<script
+			  src="https://code.jquery.com/jquery-1.12.4.min.js"
+			  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+			  crossorigin="anonymous"></script>
 		<script type="text/javascript" src="jquery.countdown.min.js" ></script>
 		<?php if($_SESSION['corectare'] == false) { echo "<script type=\"text/javascript\" src=\"butoane.js\"></script>"; } else { echo "<script type=\"text/javascript\" src=\"corectare.js\"></script>"; } ?>
 		<script type="text/javascript" src="timer.js"></script>
 		<link href="stylesheets/chestionar_css.css" media="all" rel="stylesheet"/>
 	</head>
 	<body>
-		<br/>
 		<div id="status">
-			<ul>
-				<li>Intrebari ramase: <span id="intreb_nr"><?php echo $_SESSION['intreb_afis']+1; ?></span></li>
-				<li>Raspunsuri corecte: <span id="intreb_corecte"><?php echo $_SESSION['rasp_corect'];?></span></li>
-				<li>Raspunsuri gresite: <span id="intreb_gresite"><?php echo $_SESSION['rasp_gresit'];?></span></li>
-				
-				<!--<li>Array Sarite: <span id="intreb_nr"><?php print_r ($_SESSION['sarite']); ?></span></li>
-				<li>Intrebari1: <span id="intreb_corecte"><?php echo   $_SESSION['intrebare']; ?></span></li>
-				<li>Intrebari2: <span id="intreb_gresite"><?php echo $_SESSION['intrebare2'];?></span></li>
-				<li>Normal: <span id="intreb_gresite"><?php echo $_SESSION['normal'];?></span></li>-->
-				
-				<li>Timp ramas: <span id="timp"></span></li>
-			</ul>
+			<div> <span>26</span> Intrebari initiale</div>
+			<div><span id="intreb_nr"><?php echo $_SESSION['intreb_afis']+1; ?></span> Intrebari ramase </div>
+			<div><span id="timp"></span></div>
+			
+			<div><span id="intreb_corecte"><?php echo $_SESSION['rasp_corect'];?></span> Raspunsuri corecte</div>
+			<div><span id="intreb_gresite"><?php echo $_SESSION['rasp_gresit'];?></span> Raspunsuri gresite </div>
+			
+			<!--<li>Array Sarite: <span id="intreb_nr"><?php print_r ($_SESSION['sarite']); ?></span></li>
+			<li>Intrebari1: <span id="intreb_corecte"><?php echo   $_SESSION['intrebare']; ?></span></li>
+			<li>Intrebari2: <span id="intreb_gresite"><?php echo $_SESSION['intrebare2'];?></span></li>
+			<li>Normal: <span id="intreb_gresite"><?php echo $_SESSION['normal'];?></span></li>-->
+
 		</div>
 		<div id="wrapper">
 			<div id="intrebare">
-				<?php 
-					
-				?>
 				<div id="cerinta">
 					<?php 
-						if( $o_intrebare['imagine'] != NULL ) {
-							echo "<div id=\"text\" style=\"width:650px;\"><h4>{$o_intrebare['cerinta']}</h4></div>";
-							echo "<div id=\"img\"><img src=\"{$o_intrebare['imagine']}\"></div>";
-						}
-						else
-						{
-							echo "<div id=\"text\" style=\"width:1050px;\"><h4>{$o_intrebare['cerinta']}</h4></div>";
-						}
+						echo '<div id="text">' . $o_intrebare['cerinta'] . '</div>';
 					?>	
 				</div>
 				<div id="raspunsuri">
+					<div>
 					<?php
-						echo "<h5>&nbsp;&nbsp;Variante de raspuns</h5>";
 						echo $o_intrebare['variante'];
+					?>
+					</div>
+					<?php 
+						if( $o_intrebare['imagine'] != NULL ) {
+							echo '<div id="img"><img src="' . $o_intrebare['imagine'] . '"></div>';
+						}
 					?>
 				</div>
 			</div>
-			<br/>
+
+
+			<?php if($_SESSION['corectare'] == false) : ?> 
+
+				<div id="trimite">
+					<div id="mai_tarziu">
+						Raspund mai tarziu
+					</div>
+
+					<div id="sterg_raspunsul">
+						Modifica raspunsul	
+					</div>
+
+					<div id="trimit_raspunsul">
+						Trimite raspunsul
+					</div>
+				</div>
 			
+			<?php else : ?>
+				
+				<div id="trimite">
+					<div id="trimit_raspunsul">
+						Urmatoarea intrebare
+					</div>
+				</div>
 			
-			<div id ="butoane">
-			<ul>
-				<li><div id="r_a" class="rasp_a"></div></li>
-				<li><div id="r_b" class="rasp_b"></div></li>		
-				<li><div id="r_c" class="rasp_c"></div></li>
-			</ul>
-			</div>
-
-			<?php if($_SESSION['corectare'] == false) { echo "
-			<div id=\"trimite\">
-				<div id=\"mai_tarziu\">
-					<div style=\"margin-top: 20px; margin-left: 44px; font-family: Arial; font-size: 15px; font-weight: bold;\">Raspund mai tarziu</div>
-				</div>
-
-				<div id=\"sterg_raspunsul\">
-					<div style=\"margin-top: 20px; margin-left: 42px; font-family: Arial; font-size: 15px; font-weight: bold;\">Sterg raspunsul</div>	
-				</div>
-
-				<div id=\"trimit_raspunsul\">
-					<div style=\"margin-top: 20px; margin-left: 42px; font-family: Arial; font-size: 15px; font-weight: bold;\">Trimit raspunsul</div>
-				</div>
-			</div>
-			"; 
-			} else {
-				echo "
-			<div id=\"trimite\">
-				<div id=\"trimit_raspunsul\">
-					<div style=\"margin-top: 20px; margin-left: 42px; font-family: Arial; font-size: 15px; font-weight: bold;\">Mai departe</div>
-				</div>
-			</div>
-			";
-			}
-			?>
+			<?php endif; ?>
 			
 			
 		</div>
