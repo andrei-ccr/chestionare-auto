@@ -1,0 +1,9 @@
+<p id="v_a"><b>a. </b>circulatia autovehiculelor destinate transportului de marfuri, care au distanta dintre osii mai mare de 10 m;</p>
+	<p id="v_b"><b>b. </b>accesul autovehiculelor sau ansamblurilor de vehicule cu lungimea mai mare de 10 m;</p>
+	<p id="v_c"><b>c. </b>accesul autovehiculelor destinate transportului de marfuri, care tracteaza remorci având o lungime mai mare de 10 m.</p>
+
+
+<p id=    REPLACE    <div id=
+</p>      REPLACE    </p></div>
+<b>       REPLACE    <strong>
+</b>      REPLACE    </strong><p>
